@@ -42,3 +42,11 @@ export CONTAINER_CIDR="10.244.2.0/24"
 - Add a new node with docker runtime: `add-docker-node.sh`
 - Add a new node with frakti runtime: `add-hyper-node.sh`
 
+## vagrant
+
+### private network
+```sh
+#added to lib/kubeadm.yaml
+api:
+  advertiseAddress: "x.x.x.x"
+```
