@@ -1,0 +1,17 @@
+# Ref https://github.com/kubernetes/kubernetes/blob/master/cmd/kubeadm/app/apis/kubeadm/v1alpha1/types.go#L27
+kind: MasterConfiguration
+apiVersion: kubeadm.k8s.io/v1alpha1
+kubernetesVersion: "stable"
+apiServerCertSANs: []
+controllerManagerExtraArgs:
+  horizontal-pod-autoscaler-use-rest-clients: "true"
+  horizontal-pod-autoscaler-sync-period: "10s"
+  node-monitor-grace-period: "10s"
+  feature-gates: "AllAlpha=true"
+  enable-dynamic-provisioning: "true"
+apiServerExtraArgs:
+  runtime-config: "api/all=true"
+  feature-gates: "AllAlpha=true"
+  # experimental-keystone-url: "https://x.x.x.x:5000/v2.0"
+networking:
+  podSubnet: "10.244.0.0/16"
