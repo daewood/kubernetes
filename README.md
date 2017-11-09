@@ -24,7 +24,7 @@ cd kubernetes
 ## Kubernetes
 
 ### Create a kubernetes cluster master
-
+You need cancel you swap first. kubelet will not start if there is sawp. sudo swapoff -a and edit your /etc/fstab
 - Install kubernetes with docker: `install-kubernetes.sh`
 - Install kubernetes with frakti: `install-kubernetes-frakti.sh`
 

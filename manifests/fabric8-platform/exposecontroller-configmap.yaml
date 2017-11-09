@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  config.yml: |-
+    domain: "wzp.local"
+    exposer: "Ingress"
+kind: ConfigMap
+metadata:
+  labels:
+    group: io.fabric8.devops.apps
+    project: exposecontroller
+    provider: fabric8
+    version: 2.2.311
+  name: exposecontroller
+  namespace: default
