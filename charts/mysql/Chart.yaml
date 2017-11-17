@@ -1,0 +1,14 @@
+name: mysql
+description: A basic mysql server
+version: 1.5.6
+keywords:
+  - mysql
+  - sql
+  - pv
+  - pvc
+home: https://github.com/daewood/kubernetes/charts
+sources:
+  - https://hub.docker.com/_/nginx/
+maintainers:
+  - name: daewood
+    email: daewood@qq.com
