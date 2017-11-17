@@ -1,0 +1,13 @@
+name: gogs
+description: A basic git server
+version: 0.11.29
+keywords:
+  - gigs
+  - git
+  - git-ssh
+home: https://github.com/daewood/kubernetes/charts
+sources:
+  - https://hub.docker.com/_/gogs/
+maintainers:
+  - name: daewood
+    email: daewood@qq.com

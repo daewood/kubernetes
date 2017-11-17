@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta1 # for versions before 1.8.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: gogs
+spec:
+  selector:
+    matchLabels:
+      app: gogs
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: gogs
+    spec:
+      containers:
+      - image: gogs/gogs
+        name: gogs
+        ports:
+        - containerPort: 3000
+          name: http
+        - containerPort: 22
+          name: ssh
+        volumeMounts:
+        - name: gogs-persistent-storage
+          mountPath: /data
+      volumes:
+      - name: gogs-persistent-storage
+        persistentVolumeClaim:
+          claimName: gogs-pv-claim

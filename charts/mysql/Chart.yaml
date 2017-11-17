@@ -8,7 +8,7 @@ keywords:
   - pvc
 home: https://github.com/daewood/kubernetes/charts
 sources:
-  - https://hub.docker.com/_/nginx/
+  - https://hub.docker.com/_/mysql/
 maintainers:
   - name: daewood
     email: daewood@qq.com
